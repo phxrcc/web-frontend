@@ -1,0 +1,461 @@
+
+/* ========================================
+   1. VARIÁVEIS E CONFIGURAÇÕES GERAIS
+======================================== */
+
+:root {
+    --verde: #22301f;
+    --verde-claro: #3a4d33;
+    --acafrao: #e0a30b;
+    --beterraba: #8e2a45;
+
+    --papel: #faf8f2;
+    --linha: #e3dfd2;
+
+    --tinta: #1d1a16;
+    --suave: #5d574c;
+
+    --largura: 1100px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--papel);
+    color: var(--tinta);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Fraunces', Georgia, serif;
+    color: var(--verde);
+    line-height: 1.2;
+}
+
+a {
+    color: var(--beterraba);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid var(--acafrao);
+    outline-offset: 3px;
+}
+
+
+/* ========================================
+   2. CABEÇALHO E NAVEGAÇÃO
+======================================== */
+
+.topo {
+    background-color: var(--verde);
+    color: #fff;
+}
+
+.topo-in {
+    max-width: var(--largura);
+    margin: 0 auto;
+    padding: 1.25rem 1.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.marca {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+}
+
+.marca span {
+    color: var(--acafrao);
+    font-style: italic;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    list-style: none;
+}
+
+nav a {
+    display: block;
+    padding: 0.5rem 1rem;
+
+    color: #e9efe3;
+    text-decoration: none;
+    border-radius: 999px;
+    font-weight: 500;
+
+    transition: background-color 0.2s;
+}
+
+nav a:hover {
+    background-color: var(--verde-claro);
+}
+
+nav a[aria-current="page"] {
+    background-color: var(--acafrao);
+    color: var(--verde);
+    font-weight: 700;
+}
+
+
+/* ========================================
+   3. CONTEÚDO PRINCIPAL
+======================================== */
+
+main {
+    max-width: var(--largura);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+
+/* ========================================
+   4. SEÇÃO DE APRESENTAÇÃO (HERO)
+======================================== */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 3rem;
+
+    padding: 4.5rem 0 3.5rem;
+}
+
+.hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    margin-bottom: 1.25rem;
+}
+
+.hero p {
+    max-width: 58ch;
+    margin-bottom: 1rem;
+    color: var(--suave);
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    border-radius: 1.5rem;
+}
+
+
+/* ========================================
+   5. CONTEÚDOS EM DESTAQUE
+======================================== */
+
+.secao {
+    padding: 3rem 0;
+}
+
+.secao h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.intro {
+    max-width: 60ch;
+    margin-bottom: 2rem;
+    color: var(--suave);
+}
+
+.destaques {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.destaque {
+    display: flex;
+    flex-direction: column;
+}
+
+.destaque .img {
+    display: block;
+    overflow: hidden;
+    border-radius: 1.25rem;
+    border: 2px solid transparent;
+
+    transition:
+        border-color 0.2s,
+        transform 0.2s;
+}
+
+.destaque .img:hover,
+.destaque .img:focus-visible {
+    border-color: var(--acafrao);
+    transform: translateY(-4px);
+}
+
+.destaque img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.destaque h3 {
+    font-size: 1.4rem;
+    margin: 1.1rem 0 0.4rem;
+}
+
+.destaque p {
+    color: var(--suave);
+    font-size: 1rem;
+}
+
+
+/* ========================================
+   6. FAIXA INFORMATIVA
+======================================== */
+
+.faixa {
+    margin: 1rem 0 4rem;
+    padding: 2.5rem;
+
+    background-color: var(--verde);
+    color: #e9efe3;
+    border-radius: 1.5rem;
+}
+
+.faixa h2 {
+    color: #fff;
+    font-size: 1.6rem;
+    margin-bottom: 0.6rem;
+}
+
+
+/* ========================================
+   7. CABEÇALHOS DAS PÁGINAS INTERNAS
+======================================== */
+
+.cabecalho {
+    padding: 4rem 0 2rem;
+    border-bottom: 1px solid var(--linha);
+}
+
+.cabecalho h1 {
+    font-size: clamp(2rem, 4.5vw, 3.1rem);
+    margin-bottom: 0.8rem;
+}
+
+.cabecalho p {
+    max-width: 60ch;
+    color: var(--suave);
+}
+
+
+/* ========================================
+   8. LISTAGEM DE ARTIGOS E RECEITAS
+======================================== */
+
+.post {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 2.5rem;
+
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--linha);
+}
+
+.post:last-of-type {
+    border-bottom: none;
+}
+
+.post img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.post--pais img,
+.post--receita img,
+.post--dica img {
+    aspect-ratio: 4 / 3;
+    object-position: center;
+}
+
+.post h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.6rem;
+}
+
+.post p {
+    max-width: 65ch;
+    margin-bottom: 0.8rem;
+}
+
+.post ul,
+.post ol {
+    max-width: 60ch;
+    margin: 0 0 1rem 1.3rem;
+}
+
+.post li {
+    margin-bottom: 0.3rem;
+}
+
+.tempo {
+    display: inline-block;
+    padding: 0.15rem 0.8rem;
+    margin-bottom: 0.8rem;
+
+    background-color: #f3ecd2;
+    color: #6b4e00;
+    border-radius: 999px;
+    font-size: 0.9rem;
+}
+
+
+/* ========================================
+   9. FORMULÁRIO DE CONTATO
+======================================== */
+
+.contato {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.5rem;
+
+    padding: 3rem 0 5rem;
+}
+
+form {
+    display: grid;
+    gap: 1.1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.3rem;
+
+    color: var(--verde);
+    font-weight: 700;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 0.8rem 1rem;
+
+    border: 1.5px solid #cfc9b8;
+    border-radius: 0.7rem;
+
+    background-color: #fff;
+    font: inherit;
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+button {
+    justify-self: start;
+    padding: 0.9rem 2rem;
+
+    background-color: var(--beterraba);
+    color: #fff;
+
+    border: none;
+    border-radius: 999px;
+
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #731f37;
+}
+
+.info p {
+    margin-bottom: 1rem;
+}
+
+
+/* ========================================
+   10. RODAPÉ
+======================================== */
+
+.rodape {
+    padding: 2rem 1.5rem;
+
+    background-color: var(--verde);
+    color: #cdd8c4;
+
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+
+/* ========================================
+   11. RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 860px) {
+
+    .hero,
+    .contato {
+        grid-template-columns: 1fr;
+    }
+
+    .destaques {
+        grid-template-columns: 1fr;
+    }
+
+    .post {
+        grid-template-columns: 1fr;
+    }
+
+    .post img {
+        aspect-ratio: 16 / 9;
+    }
+
+    .hero {
+        padding-top: 2.5rem;
+    }
+
+}
+
+
+/* ========================================
+   12. ACESSIBILIDADE
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+
+}
