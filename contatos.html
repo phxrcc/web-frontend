@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contatos | Panela &amp; Prosa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;1,600&amp;family=DM+Sans:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+<header class="topo"><div class="topo-in">
+<a class="marca" href="index.html">Panela <span>&amp;</span> Prosa</a>
+<nav aria-label="Navegação principal"><ul><li><a href="index.html">Home</a></li><li><a href="receitas.html">Receitas</a></li><li><a href="sabores-do-mundo.html">Sabores do Mundo</a></li><li><a href="dicas-do-chef.html">Dicas do Chef</a></li><li><a href="contatos.html" aria-current="page">Contatos</a></li></ul></nav>
+</div></header>
+<main>
+<header class="cabecalho"><h1>Contatos</h1><p>Quer sugerir uma receita, tirar uma dúvida ou propor uma parceria? Escreva para a gente.</p></header>
+<section class="contato">
+<form action="#" method="post" onsubmit="event.preventDefault();this.reset();document.getElementById('ok').hidden=false;">
+<div><label for="nome">Nome</label><input id="nome" name="nome" type="text" required></div>
+<div><label for="email">E-mail</label><input id="email" name="email" type="email" required></div>
+<div><label for="assunto">Assunto</label><select id="assunto" name="assunto"><option>Sugestão de receita</option><option>Dúvida</option><option>Parceria</option><option>Outro</option></select></div>
+<div><label for="msg">Mensagem</label><textarea id="msg" name="msg" required></textarea></div>
+<button type="submit">Enviar mensagem</button>
+<p id="ok" hidden role="status">Mensagem enviada. Obrigado pelo contato!</p>
+</form>
+<div class="info">
+<h2>Fale com a gente</h2><br>
+<p><strong>E-mail:</strong> contato@panelaeprosa.com.br</p>
+<p><strong>Instagram:</strong> @panelaeprosa</p>
+<p><strong>Resposta:</strong> em até dois dias úteis.</p>
+<p>Prefere ver as receitas antes? Volte para a <a href="index.html">Home</a> e explore os conteúdos em destaque.</p>
+</div>
+</section>
+</main>
+<footer class="rodape">© 2026 Panela &amp; Prosa. Cozinhar é um jeito de conversar.</footer>
+</body>
+</html>
