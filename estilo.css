@@ -1,0 +1,56 @@
+:root{--verde:#22301f;--verde2:#3a4d33;--acafrao:#e0a30b;--beterraba:#8e2a45;--papel:#faf8f2;--linha:#e3dfd2;--tinta:#1d1a16;--suave:#5d574c}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--papel);color:var(--tinta);line-height:1.7;font-size:1.05rem}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;line-height:1.2;color:var(--verde)}
+a{color:var(--beterraba)}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid var(--acafrao);outline-offset:3px}
+.topo{background:var(--verde);color:#fff}
+.topo-in{max-width:1100px;margin:0 auto;padding:1.25rem 1.5rem;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem}
+.marca{font-family:'Fraunces',Georgia,serif;font-size:1.6rem;font-weight:700;color:#fff;text-decoration:none}
+.marca span{color:var(--acafrao);font-style:italic}
+nav ul{list-style:none;display:flex;flex-wrap:wrap;gap:.35rem}
+nav a{display:block;padding:.5rem 1rem;color:#e9efe3;text-decoration:none;border-radius:999px;font-weight:500}
+nav a:hover{background:var(--verde2)}
+nav a[aria-current="page"]{background:var(--acafrao);color:var(--verde);font-weight:700}
+main{max-width:1100px;margin:0 auto;padding:0 1.5rem}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center;padding:4.5rem 0 3.5rem}
+.hero h1{font-size:clamp(2.2rem,5vw,3.6rem);margin-bottom:1.25rem}
+.hero p{color:var(--suave);max-width:58ch;margin-bottom:1rem}
+.hero img{width:100%;border-radius:1.5rem;display:block}
+.secao{padding:3rem 0}
+.secao>h2{font-size:2rem;margin-bottom:.5rem}
+.secao>p.intro{color:var(--suave);max-width:60ch;margin-bottom:2rem}
+.destaques{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.destaque{display:flex;flex-direction:column}
+.destaque a.img{display:block;border-radius:1.25rem;overflow:hidden;border:2px solid transparent;transition:border-color .2s,transform .2s}
+.destaque a.img:hover,.destaque a.img:focus-visible{border-color:var(--acafrao);transform:translateY(-4px)}
+.destaque img{width:100%;display:block;aspect-ratio:4/3;object-fit:cover}
+.destaque h3{font-size:1.4rem;margin:1.1rem 0 .4rem}
+.destaque p{color:var(--suave);font-size:1rem}
+.faixa{background:var(--verde);color:#e9efe3;border-radius:1.5rem;padding:2.5rem;margin:1rem 0 4rem}
+.faixa h2{color:#fff;font-size:1.6rem;margin-bottom:.6rem}
+.cabecalho{padding:4rem 0 2rem;border-bottom:1px solid var(--linha)}
+.cabecalho h1{font-size:clamp(2rem,4.5vw,3.1rem);margin-bottom:.8rem}
+.cabecalho p{color:var(--suave);max-width:60ch}
+.post{display:grid;grid-template-columns:260px 1fr;gap:2.5rem;padding:3rem 0;border-bottom:1px solid var(--linha)}
+.post:last-of-type{border-bottom:0}
+.post img{width:100%;border-radius:1rem;aspect-ratio:1;object-fit:cover;display:block}
+.post--pais img{aspect-ratio:4/3;object-position:center}
+.post--receita img,.post--dica img{aspect-ratio:4/3;object-position:center}
+.post h2{font-size:1.6rem;margin-bottom:.6rem}
+.post p{max-width:65ch;margin-bottom:.8rem}
+.post ul,.post ol{margin:0 0 1rem 1.3rem;max-width:60ch}
+.post li{margin-bottom:.3rem}
+.tempo{display:inline-block;background:#f3ecd2;color:#6b4e00;padding:.15rem .8rem;border-radius:999px;font-size:.9rem;margin-bottom:.8rem}
+.contato{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;padding:3rem 0 5rem}
+form{display:grid;gap:1.1rem}
+label{font-weight:700;display:block;margin-bottom:.3rem;color:var(--verde)}
+input,textarea,select{width:100%;padding:.8rem 1rem;border:1.5px solid #cfc9b8;border-radius:.7rem;font:inherit;background:#fff}
+textarea{min-height:150px;resize:vertical}
+button{justify-self:start;background:var(--beterraba);color:#fff;border:0;padding:.9rem 2rem;border-radius:999px;font:inherit;font-weight:700;cursor:pointer}
+button:hover{background:#731f37}
+.info p{margin-bottom:1rem}
+.rodape{background:var(--verde);color:#cdd8c4;text-align:center;padding:2rem 1.5rem;font-size:.95rem}
+@media(max-width:860px){.hero,.contato{grid-template-columns:1fr}.destaques{grid-template-columns:1fr}.post{grid-template-columns:1fr}.post img{aspect-ratio:16/9}.hero{padding-top:2.5rem}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
